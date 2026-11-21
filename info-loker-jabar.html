@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1264df">
+<meta name="description" content="Info lowongan kerja terbaru di seluruh Jawa Barat. Gratis tanpa pungutan biaya.">
+<title>Info Loker Jabar - Terbaru & Terpercaya</title>
+<style>
+:root{--blue:#1268e8;--blue2:#084aa8;--green:#168653;--ink:#172033;--muted:#6b7280;--line:#e1e6ed;--soft:#f1f5fa}
+*{box-sizing:border-box}body{margin:0;background:#f7f8fa;color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+header{background:#fff;border-bottom:1px solid #e7eaf0;position:sticky;top:0;z-index:5}
+.top{max-width:1100px;margin:auto;min-height:112px;padding:16px 20px;display:flex;align-items:center;gap:14px}
+.logo{display:flex;align-items:center;gap:14px;cursor:pointer;user-select:none;min-width:0;flex:1}
+.logo-mark{background:#1268e8;color:white;font-weight:800;font-size:22px;padding:17px 14px;border-radius:14px;white-space:nowrap}
+.brand{font-size:29px;font-weight:800;color:#1768d9;line-height:1.08}.tagline{font-size:17px;color:#737b87;margin-top:4px;font-weight:600}
+.search-btn{border:0;background:#111;color:#fff;width:62px;height:62px;border-radius:13px;font-size:26px;cursor:pointer}
+.wa-btn{background:var(--green);color:white;text-decoration:none;font-weight:800;padding:17px 19px;border-radius:12px;line-height:1.35;text-align:center}
+.hero{background:linear-gradient(110deg,#1474f6,#08469f);color:white;text-align:center;padding:44px 18px 38px}
+.hero h1{font-size:36px;margin:0 0 20px}.hero p{font-size:23px;line-height:1.55;margin:0 auto 28px;max-width:780px}
+.hero a{display:inline-block;background:#168653;color:white;text-decoration:none;padding:20px 30px;border-radius:12px;font-weight:800;font-size:19px}
+.filters{display:flex;gap:10px;overflow-x:auto;padding:22px max(20px,calc((100% - 1060px)/2));background:#fff;border-bottom:1px solid var(--line);scrollbar-width:thin}
+.filter{border:2px solid #e3e6eb;background:#fff;padding:12px 23px;border-radius:30px;font-size:17px;font-weight:700;white-space:nowrap;cursor:pointer}
+.filter.active{background:var(--blue);border-color:var(--blue);color:white}
+main{max-width:1100px;margin:0 auto;padding:32px 20px 70px}
+.section-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:22px}
+.section-head h2{font-size:25px;margin:0}.updated{color:#737b87;font-size:17px}
+.job{background:#fff;border:2px solid #e5e9ef;border-radius:20px;padding:27px;margin-bottom:22px;box-shadow:0 2px 5px #17203308}
+.job-title{font-size:25px;line-height:1.35;color:#1768d9;font-weight:800;margin:0 0 16px;cursor:pointer}
+.job-top{display:flex;align-items:flex-start;justify-content:space-between;gap:15px}
+.tag{background:#d8eee4;color:#176044;border-radius:9px;padding:11px 15px;font-weight:800;white-space:nowrap}
+.meta{display:flex;flex-wrap:wrap;gap:20px;color:#737b87;font-size:18px;margin-bottom:20px}
+.summary{background:#f0f4f9;border-radius:12px;padding:14px 17px;font-size:19px;line-height:1.55;font-weight:600;color:#344054}
+.job-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:17px}
+.small-btn{border:0;background:#1768d9;color:white;padding:11px 16px;border-radius:9px;font-weight:700;cursor:pointer}
+.empty{text-align:center;padding:45px;background:white;border-radius:16px;color:#6b7280}
+footer{text-align:center;padding:30px 15px;background:#fff;border-top:1px solid var(--line);color:#737b87}
+footer a{color:#1768d9;text-decoration:none;margin:0 8px}
+.ad-slot{margin:22px 0;padding:16px;border:1px dashed #cbd5e1;border-radius:10px;text-align:center;color:#94a3b8;font-size:13px;background:#fff}
+.overlay{display:none;position:fixed;inset:0;background:#0009;z-index:20;align-items:center;justify-content:center;padding:16px}
+.modal{background:white;border-radius:16px;padding:24px;width:min(650px,100%);max-height:90vh;overflow:auto}
+.modal h2{margin-top:0}.modal input,.modal textarea,.modal select{width:100%;padding:12px;border:1px solid #cbd5e1;border-radius:8px;margin:6px 0 14px;font:inherit}
+.modal textarea{min-height:100px}.modal label{font-weight:700;font-size:14px}
+.modal-actions{display:flex;gap:10px;flex-wrap:wrap}.danger{background:#c73535}.secondary{background:#64748b}.admin-bar{display:none;background:#fff7df;border:1px solid #f0d58b;padding:12px;border-radius:10px;margin-bottom:20px}
+.close{float:right;border:0;background:#eef2f7;border-radius:8px;padding:7px 11px;cursor:pointer}
+.notice{font-size:13px;color:#64748b;line-height:1.5}
+@media(max-width:650px){.top{min-height:90px;padding:12px;gap:9px}.logo{gap:9px}.logo-mark{font-size:16px;padding:14px 10px;border-radius:11px}.brand{font-size:21px}.tagline{font-size:13px}.search-btn{width:48px;height:50px;font-size:22px}.wa-btn{font-size:13px;padding:13px 10px}.hero{padding:42px 18px 36px}.hero h1{font-size:27px}.hero p{font-size:18px}.hero a{font-size:16px;padding:17px 18px}.filters{padding:18px 14px}.filter{font-size:15px;padding:11px 19px}main{padding:25px 14px 50px}.section-head h2{font-size:21px}.updated{font-size:14px}.job{padding:21px 18px;border-radius:17px}.job-title{font-size:21px}.meta{font-size:15px;gap:12px}.summary{font-size:16px}.tag{font-size:13px;padding:9px 10px}.job-top{gap:8px}}
+</style>
+</head>
+<body>
+<header>
+ <div class="top">
+  <div class="logo" id="logo" title="Info Loker Jabar">
+   <div class="logo-mark">LOKER</div>
+   <div><div class="brand">Info Loker Jabar</div><div class="tagline">Terbaru &amp; Terpercaya</div></div>
+  </div>
+  <button class="search-btn" id="searchToggle" aria-label="Cari lowongan">⌕</button>
+  <a class="wa-btn" href="https://whatsapp.com/channel/0029VbEhLf8GU3BIgApP8D3d" target="_blank" rel="noopener">☏ SALURAN<br>WA</a>
+ </div>
+ <div id="searchPanel" style="display:none;padding:0 20px 15px;max-width:1100px;margin:auto"><input id="searchInput" placeholder="Cari posisi, perusahaan, atau wilayah..." style="width:100%;padding:14px;border:1px solid #cbd5e1;border-radius:10px;font-size:16px"></div>
+</header>
+<section class="hero">
+ <h1>Info Lowongan Kerja Jawa Barat</h1>
+ <p>Update loker pabrik, kantor, retail &amp; BUMN setiap hari.<br>Gratis tanpa pungutan biaya!</p>
+ <a href="https://whatsapp.com/channel/0029VbEhLf8GU3BIgApP8D3d" target="_blank" rel="noopener">☏ Ikuti Saluran WhatsApp Resmi</a>
+</section>
+<nav class="filters" id="filters">
+ <button class="filter active" data-region="Semua Wilayah">Semua Wilayah</button>
+ <button class="filter" data-region="Sukabumi">Sukabumi</button>
+ <button class="filter" data-region="Bogor">Bogor</button>
+ <button class="filter" data-region="Cikarang">Cikarang</button>
+ <button class="filter" data-region="Bandung">Bandung</button>
+ <button class="filter" data-region="Karawang">Karawang</button>
+ <button class="filter" data-region="Bekasi">Bekasi</button>
+ <button class="filter" data-region="Purwakarta">Purwakarta</button>
+</nav>
+<main>
+ <div class="admin-bar" id="adminBar"><strong>Mode Admin aktif</strong> — <span id="adminCount">0</span> lowongan tersimpan.
+  <div class="job-actions"><button class="small-btn" id="addJob">＋ Tambah Lowongan</button><button class="small-btn secondary" id="logout">Keluar Admin</button></div>
+ </div>
+ <div class="section-head"><h2>🧳 Lowongan Terbaru Hari Ini</h2><span class="updated">Update 2026</span></div>
+ <div id="jobs"></div>
+ <div class="ad-slot"><!-- Tempat iklan Adsterra: tempel kode iklan Adsterra yang diberikan di dashboard akun Anda di sini. --><strong>Ruang Iklan</strong><br>Tempatkan kode iklan Adsterra di sini setelah akun disetujui.</div>
+</main>
+<footer>
+ <strong>INFO LOKER JABAR</strong><br>Informasi lowongan kerja Jawa Barat. Selalu cek kebenaran informasi dan jangan pernah membayar biaya rekrutmen.<br><br>
+ <a href="https://whatsapp.com/channel/0029VbEhLf8GU3BIgApP8D3d" target="_blank">Saluran WhatsApp</a> ·
+ <a href="https://t.me/lokersukabumijabar" target="_blank">Grup Telegram</a>
+</footer>
+
+<div class="overlay" id="loginOverlay"><div class="modal">
+ <button class="close" data-close>✕</button><h2>Login Administrator</h2>
+ <p>Masukkan kata sandi untuk mengelola lowongan.</p>
+ <label>Kata sandi</label><input id="password" type="password" placeholder="Kata sandi admin">
+ <div class="modal-actions"><button class="small-btn" id="loginBtn">Masuk Admin</button></div>
+ <p class="notice">Akses admin pada file HTML mandiri ini dilindungi di sisi browser saja. Untuk website publik, pindahkan autentikasi dan penyimpanan ke server agar kata sandi dan data tidak dapat diperiksa atau diubah pengunjung.</p>
+</div></div>
+<div class="overlay" id="editOverlay"><div class="modal">
+ <button class="close" data-close>✕</button><h2 id="formTitle">Tambah Lowongan</h2>
+ <form id="jobForm">
+  <input type="hidden" id="jobId">
+  <label>Judul lowongan</label><input id="title" required placeholder="Contoh: Lowongan Kerja PT ...">
+  <label>Perusahaan</label><input id="company" placeholder="Nama perusahaan">
+  <label>Wilayah</label><select id="region"><option>Sukabumi</option><option>Bogor</option><option>Cikarang</option><option>Bandung</option><option>Karawang</option><option>Bekasi</option><option>Purwakarta</option><option>Jawa Barat</option></select>
+  <label>Tanggal posting</label><input id="date" type="date" required>
+  <label>Posisi yang dibutuhkan</label><textarea id="positions" required placeholder="Contoh: Operator Produksi, Staff Gudang"></textarea>
+  <label>Gaji (opsional)</label><input id="salary" placeholder="Contoh: Sesuai UMK">
+  <label>Deskripsi dan persyaratan</label><textarea id="description" placeholder="Tuliskan detail lowongan dan persyaratan"></textarea>
+  <label>Link melamar / sumber resmi (opsional)</label><input id="apply" type="url" placeholder="https://...">
+  <div class="modal-actions"><button class="small-btn" type="submit">Simpan Lowongan</button><button class="small-btn secondary" type="button" data-close>Batal</button></div>
+ </form>
+</div></div>
+<div class="overlay" id="detailOverlay"><div class="modal">
+ <button class="close" data-close>✕</button><div id="detailContent"></div>
+</div></div>
+<script>
+const STORE='infoLokerJabar_jobs_v1';
+const seed=[
+{id:'seed1',title:'Lowongan Kerja Terbaru Jawa Barat',company:'Informasi Lowongan',region:'Sukabumi',date:'2026-11-21',positions:'Tambahkan informasi lowongan terbaru melalui menu admin.',salary:'',description:'Ini adalah konten contoh. Silakan masuk admin untuk mengganti atau menghapusnya dan memasukkan lowongan yang sudah diverifikasi.',apply:''}
+];
+let jobs=JSON.parse(localStorage.getItem(STORE)||'null')||seed;
+let region='Semua Wilayah',admin=false,logoTaps=0,logoTimer;
+const $=id=>document.getElementById(id);
+function save(){localStorage.setItem(STORE,JSON.stringify(jobs));render()}
+function safe(s=''){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function dateFmt(d){if(!d)return 'Tanggal belum diisi';let x=new Date(d+'T00:00:00');return isNaN(x)?d:x.toLocaleDateString('id-ID',{day:'2-digit',month:'2-digit',year:'numeric'})}
+function render(){
+ const q=$('searchInput').value.toLowerCase().trim();
+ const list=jobs.filter(j=>(region==='Semua Wilayah'||j.region===region)&&[j.title,j.company,j.region,j.positions].join(' ').toLowerCase().includes(q)).sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+ $('adminBar').style.display=admin?'block':'none';$('adminCount').textContent=jobs.length;
+ if(!list.length){$('jobs').innerHTML='<div class="empty">Tidak ada lowongan yang cocok dengan pencarian ini.</div>';return}
+ $('jobs').innerHTML=list.map(j=>`<article class="job"><div class="job-top"><div style="flex:1;min-width:0"><h3 class="job-title" data-detail="${safe(j.id)}">${safe(j.title)}</h3></div><span class="tag">TERBARU</span></div><div class="meta"><span>📍 ${safe(j.region)}</span><span>◷ ${dateFmt(j.date)}</span><span>◉ ${Number(j.views||0).toLocaleString('id-ID')} dilihat</span></div><div class="summary">Posisi: ${safe(j.positions)}</div><div class="job-actions"><button class="small-btn" data-detail="${safe(j.id)}">Lihat Detail</button>${admin?`<button class="small-btn secondary" data-edit="${safe(j.id)}">Edit</button><button class="small-btn danger" data-delete="${safe(j.id)}">Hapus</button>`:''}</div></article>`).join('');
+}
+$('filters').addEventListener('click',e=>{let b=e.target.closest('button[data-region]');if(!b)return;region=b.dataset.region;document.querySelectorAll('.filter').forEach(x=>x.classList.toggle('active',x===b));render()});
+$('searchToggle').onclick=()=>{$('searchPanel').style.display=$('searchPanel').style.display==='none'?'block':'none';if($('searchPanel').style.display==='block')$('searchInput').focus()};
+$('searchInput').addEventListener('input',render);
+$('logo').addEventListener('click',()=>{logoTaps++;clearTimeout(logoTimer);logoTimer=setTimeout(()=>logoTaps=0,1800);if(logoTaps>=5){logoTaps=0;$('loginOverlay').style.display='flex';$('password').value='';$('password').focus()}});
+$('loginBtn').onclick=()=>{if($('password').value==='jabar2026'){admin=true;$('loginOverlay').style.display='none';render()}else alert('Kata sandi salah.')};
+$('logout').onclick=()=>{admin=false;render()};
+function openForm(j){$('jobForm').reset();$('jobId').value=j?.id||'';$('formTitle').textContent=j?'Edit Lowongan':'Tambah Lowongan';$('title').value=j?.title||'';$('company').value=j?.company||'';$('region').value=j?.region||'Sukabumi';$('date').value=j?.date||new Date().toISOString().slice(0,10);$('positions').value=j?.positions||'';$('salary').value=j?.salary||'';$('description').value=j?.description||'';$('apply').value=j?.apply||'';$('editOverlay').style.display='flex'}
+$('addJob').onclick=()=>openForm(null);
+$('jobForm').onsubmit=e=>{e.preventDefault();if(!admin)return;let id=$('jobId').value;let old=jobs.find(x=>x.id===id);let obj={id:id||'job'+Date.now(),title:$('title').value.trim(),company:$('company').value.trim(),region:$('region').value,date:$('date').value,positions:$('positions').value.trim(),salary:$('salary').value.trim(),description:$('description').value.trim(),apply:$('apply').value.trim(),views:old?.views||0};if(id)jobs=jobs.map(x=>x.id===id?obj:x);else jobs.unshift(obj);$('editOverlay').style.display='none';save()};
+document.addEventListener('click',e=>{
+ let d=e.target.closest('[data-detail]');if(d){let j=jobs.find(x=>x.id===d.dataset.detail);if(!j)return;j.views=(j.views||0)+1;localStorage.setItem(STORE,JSON.stringify(jobs));$('detailContent').innerHTML=`<h2>${safe(j.title)}</h2><p><b>Perusahaan:</b> ${safe(j.company||'-')}</p><p><b>Lokasi:</b> ${safe(j.region)}</p><p><b>Tanggal:</b> ${dateFmt(j.date)}</p><p><b>Posisi:</b><br>${safe(j.positions)}</p><p><b>Gaji:</b> ${safe(j.salary||'Tidak dicantumkan')}</p><p><b>Deskripsi & persyaratan:</b><br>${safe(j.description||'Silakan cek sumber lowongan.')}</p>${j.apply?`<p><a class="small-btn" href="${safe(j.apply)}" target="_blank" rel="noopener">Lamar / Buka Sumber Lowongan</a></p>`:''}<p class="notice">Waspada penipuan. Jangan membayar biaya rekrutmen.</p>`;$('detailOverlay').style.display='flex';render();return}
+ let ed=e.target.closest('[data-edit]');if(ed&&admin){openForm(jobs.find(x=>x.id===ed.dataset.edit));return}
+ let del=e.target.closest('[data-delete]');if(del&&admin){if(confirm('Hapus lowongan ini?')){jobs=jobs.filter(x=>x.id!==del.dataset.delete);save()}return}
+ if(e.target.matches('[data-close]'))e.target.closest('.overlay').style.display='none';
+});
+document.querySelectorAll('.overlay').forEach(o=>o.addEventListener('click',e=>{if(e.target===o)o.style.display='none'}));
+render();
+</script>
+</body>
+</html>
